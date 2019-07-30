@@ -6,37 +6,54 @@ import {
 
 import styles from './styles'
 
+import StarRating from 'react-native-star-rating'
+import CachedImage from '../CachedImage/CachedImage'
+
 class Home extends React.Component {
+
     render() {
+        const { width, type, location, price, imageURI } = this.props
         return (
-            <View style={ styles_coupled.homeCradle }>
-            <View style={{ flex: 1}}>
-                <Image
-                    style={ styles.homeImage }
-                    source={ require('../../assets/home.jpg') }
-                />
+            <View style={{
+                width: (width / 2) - 30,
+                height: (width / 2) - 30,
+                marginBottom: 20,
+                borderWidth: 0.5,
+                borderColor: '#DDD',
+            }}>
+                <View style={{ flex: 1}}>
+                    <CachedImage
+                        style={ styles.homeImage }
+                        source={{ uri: imageURI }}
+                    />
+                </View>
+                <View style={ styles.homeDetailsCradle }>
+                    <Text style={ styles.homeTitle}>
+                        { type }
+                    </Text>
+                    <Text style={ styles.homeLocation }>
+                        { location }
+                    </Text>
+                    <Text style={ styles.accomodationRate }>
+                        { price }
+                    </Text>
+                    <StarRating 
+                        disable={ true }
+                        maxStars={ 5 }
+                        rating={ this.props.rating }
+                        starSize={ 10 }
+                    />
+                </View>
             </View>
-            <View style={ styles.homeDetailsCradle }>
-                <Text style={ styles.homeTitle}>
-                    PRIVATE ROOM - 2 BEDS
-                </Text>
-                <Text style={ styles.homeLocation }>
-                    Midtown
-                </Text>
-                <Text style={ styles.accomodationRate }>
-                    45$ / Night
-                </Text>
-            </View>
-        </View>
         );
     }
 }
 
 export default Home
 
-const styles_coupled = StyleSheet.create((props) =>{
-    homeCradle: {
-        width: this.props.width / 2,
-        height: this.props.width / 2
-    }
-})
+// const styles_coupled = StyleSheet.create({
+//     homeCradle: {
+//         width: this.props.width / 2,
+//         height: this.props.width / 2
+//     }
+// })

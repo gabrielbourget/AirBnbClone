@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         width: 130,
         // TODO: -> Indicative of the need for a consistent 
         //          grid gap within a flexbox paradigm. 
-        marginLeft: 20,
+        marginHorizontal: 8,
         borderWidth: 0.5,
         borderColor: '#DDD'
     },
@@ -27,6 +27,8 @@ const styles = StyleSheet.create({
     },
     scrollViewItemBottomText: {
         flex: 1,
+        fontSize: 15,
+        fontWeight: '500',
         paddingLeft: 10, 
         paddingTop: 10
     }

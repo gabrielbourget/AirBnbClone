@@ -14,15 +14,16 @@ const styles = {
         paddingLeft: 10
     },  
     homeTitle: {
-        fontSize: 14,
+        fontSize: 12,
+        fontWeight: 'bold',
         color: '#B63838'
     },
     homeLocation: {
-        fontSize: 12,
+        fontSize: 11,
         fontWeight: 'bold'
     },
     accomodationRate: {
-        fontSize: 12
+        fontSize: 11
     }
 }
 

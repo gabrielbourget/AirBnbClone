@@ -3,13 +3,6 @@ import { StyleSheet, Platform } from 'react-native'
 const styles = StyleSheet.create({
     safeAreaView: { flex: 1 },
     container: { flex: 1 },
-    header: {
-        height: 80,
-        paddingTop: 20,
-        backgroundColor: 'white',
-        borderBottomWidth: 1,
-        borderBottomColor: '#DDD',
-    },
     searchBar: {        
         flexDirection: 'row',
         padding: 10,
@@ -36,12 +29,8 @@ const styles = StyleSheet.create({
         fontWeight: '700',
         paddingHorizontal: 20
     },
-    scrollViewCradle: {
-        height: 130, 
-        marginTop: 20,
-    },
     jumbotronCradle: {
-        marginTop: 40,
+        marginTop: 25,
         paddingHorizontal: 20
     },
     actionHeading: {
@@ -62,18 +51,7 @@ const styles = StyleSheet.create({
         shadowColor: 'black',
         shadowOpacity: 0.8
     },
-    homePreviewsCradle: {
-        marginTop: 20
-    },
-    homePreviewsTagline: {
-        fontSize: 24,
-        fontWeight: '700',
-        paddingHorizontal: 20
-    },
-    homePreviewCradle: {
-        paddingHorizontal: 20,
-        marginTop: 20
-    },
+
 })
 
 export default styles
